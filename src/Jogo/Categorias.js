@@ -5,7 +5,7 @@ import config from './../Config'
 import Navegacao from './Navegacao'
 import Categoria from './Categoria'
 
-
+ 
 class Categorias extends Component {
     constructor (props){
         super(props)
