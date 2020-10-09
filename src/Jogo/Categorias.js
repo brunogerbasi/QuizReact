@@ -30,15 +30,15 @@ class Categorias extends Component {
                         Categorias
                     </h2>
                     <p>Selecione a categoria das perguntas</p>
-                    <p>{JSON.stringify(this.state.categorias)}</p>
-
+                    
                     <Grid columns={5}>
-                        <Categoria titulo='Esportes'  icone='futbol'/>
-                        <Categoria titulo='Música' icone='music'/>
-                        <Categoria titulo='Mundo' icone='globe'/>
-                        <Categoria titulo='Animais'  icone='paw'/>
-                        <Categoria titulo='Games' icone='gamepad'/>
-                        <Categoria titulo='Filmes' icone='video'/>
+                        {
+                            Object.keys(this.state.categorias)
+                            .map(key =>{
+                                return <Categoria key={key} titulo={this.state.categorias[key].nome}  icone={this.state.categorias[key].icone}/>    
+                            })
+                        }
+                                            
                     </Grid>
                 </div>
             </section>
